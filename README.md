@@ -1,7 +1,7 @@
 # PyTorch BERT Document Classification
 
 Adding Knowledge graph about film's properties on IMDB dataset on bert-base-cased model.
-Code from [pytorch-bert-document-classification](https://github.com/malteos/pytorch-bert-document-classification)
+Code from [pytorch-bert-document-classification](https://github.com/malteos/pytorch-bert-document-classification).
 Implementation and pre-trained models of the paper *Enriching BERT with Knowledge Graph Embedding for Document Classification* ([PDF](https://arxiv.org/abs/1909.08402)).
 A submission to the [GermEval 2019 shared task](https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc.html) on hierarchical text classification.
 
@@ -133,7 +133,7 @@ The scores from the result table can be reproduced with the `evaluation.ipynb` n
 - [Huggingface PyTorch Transformer](https://github.com/huggingface/pytorch-transformers)
 - [Deepset AI - BERT-german](https://deepset.ai/german-bert)
 - [Facebook PyTorch BigGraph](https://github.com/facebookresearch/PyTorch-BigGraph)
-
+- [pytorch-bert-document-classification](https://github.com/malteos/pytorch-bert-document-classification)
 ## License
 
 MIT
