@@ -1,8 +1,9 @@
 # PyTorch BERT Document Classification
 
+Adding Knowledge graph about film's properties on IMDB dataset on bert-base-cased model.
+Code from [pytorch-bert-document-classification](https://github.com/malteos/pytorch-bert-document-classification)
 Implementation and pre-trained models of the paper *Enriching BERT with Knowledge Graph Embedding for Document Classification* ([PDF](https://arxiv.org/abs/1909.08402)).
 A submission to the [GermEval 2019 shared task](https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc.html) on hierarchical text classification.
-If you encounter any problems, feel free to contact us or submit a GitHub issue.
 
 ## Content
 
@@ -82,7 +83,11 @@ task-b__bert-german_text-only
 task-b__author-only
 task-b__bert-multilingual_text-only
 ```
-
+New experiment added in cli.py
+```
+imdb_review
+imdbke_review
+```
 ### Enviroment variables
 
 - `TRAIN_DF_PATH`: Path to Pandas Dataframe (pickle)
@@ -102,23 +107,24 @@ python cli.py run_on_val <name> $GPU_ID $EXTRAS_DIR $TRAIN_DF_PATH $VAL_DF_PATH 
 ```
 python cli.py run_on_test <name> $GPU_ID $EXTRAS_DIR $FULL_DF_PATH $TEST_DF_PATH $OUTPUT_DIR --epochs 5
 ```
+### IMDB Validation set
+
+```
+export ISIMDB=True
+python cli.py run_on_val <name> $GPU_ID $EXTRAS_DIR $TRAIN_DF_PATH $VAL_DF_PATH $OUTPUT_DIR $ISIMDB --epochs 5
+```
+
+### IMDB Test set
+
+```
+export ISIMDB=True
+python cli.py run_on_test <name> $GPU_ID $EXTRAS_DIR $FULL_DF_PATH $TEST_DF_PATH $OUTPUT_DIR $ISIMDB= --epochs 5
+```
 
 ### Evaluation
 
 The scores from the result table can be reproduced with the `evaluation.ipynb` notebook.
 
-## How to cite
-
-If you are using our code, please cite [our paper](https://arxiv.org/abs/1909.08402):
-```
-@inproceedings{Ostendorff2019,
-    address = {Erlangen, Germany},
-    author = {Ostendorff, Malte and Bourgonje, Peter and Berger, Maria and Moreno-Schneider, Julian and Rehm, Georg},
-    booktitle = {Proceedings of the GermEval 2019 Workshop},
-    title = {{Enriching BERT with Knowledge Graph Embedding for Document Classification}},
-    year = {2019}
-}
-```
 
 ## References
 
